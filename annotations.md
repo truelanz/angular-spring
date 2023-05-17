@@ -61,5 +61,12 @@
  export class AppMaterialModule { } ``
     - É necessário somente o `imports:[] e export class` nesse modulo.
 
+### Services
+- Criando service module `ng g s services/className` 
+  - Regras de negócios, dados e manipulação de dados devem ser contidos nos **services**.
+  - Os **components.ts** só serão encarregados de manipular os arquivos que serão renderizados.
+  - Adcionar `httpClient: HttpClient` no constructor do service para chamadas http. [_ref_](https://www.youtube.com/watch?v=76fUSr1nSDM&list=PLGxZ4Rq3BOBpwaVgAPxTxhdX_TfSVlTcY&index=8&ab_channel=LoianeGroner) Importar de maneira global do módulo `HttpClientModule` em `app.module` . Adcionar uma variável do service no constructor do component que ele será utilizado, tipando como `:NameService`. 
+  
+
 
 
