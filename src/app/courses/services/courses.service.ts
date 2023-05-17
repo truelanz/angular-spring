@@ -1,17 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Course } from '../model/course';
 import { HttpClient } from '@angular/common/http'
+import { delay, first, tap } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
 
-  constructor(private httpClient: HttpClient) { }
+  private readonly API = '/assets/courses.json';
 
-  findAll(): Course[] {
-    return [
-      { _id: '1', name: 'Angular', category: 'front-end' }
-    ]
+  constructor(
+    private httpClient: HttpClient,
+    ) { }
+
+  findAll() {
+    return this.httpClient.get<Course[]>(this.API)
+    .pipe(
+      first(),
+      delay(2000),
+      tap(courses => console.log(courses))
+    )
   };
+
 }

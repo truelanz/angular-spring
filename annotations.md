@@ -66,6 +66,20 @@
   - Regras de negócios, dados e manipulação de dados devem ser contidos nos **services**.
   - Os **components.ts** só serão encarregados de manipular os arquivos que serão renderizados.
   - Adcionar `httpClient: HttpClient` no constructor do service para chamadas http. [_ref_](https://www.youtube.com/watch?v=76fUSr1nSDM&list=PLGxZ4Rq3BOBpwaVgAPxTxhdX_TfSVlTcY&index=8&ab_channel=LoianeGroner) Importar de maneira global do módulo `HttpClientModule` em `app.module` . Adcionar uma variável do service no constructor do component que ele será utilizado, tipando como `:NameService`. 
+
+### Tratamento de errros [(_ref_)](https://www.youtube.com/watch?v=gi0ZJ8-r6IM&list=PLGxZ4Rq3BOBpwaVgAPxTxhdX_TfSVlTcY&index=11&ab_channel=LoianeGroner)
+
+
+### Pipe [(ref)](https://www.youtube.com/watch?v=uNFIh3jvp34&list=PLGxZ4Rq3BOBpwaVgAPxTxhdX_TfSVlTcY&index=12&ab_channel=LoianeGroner)
+- `ng g pipe dirName/pipes/pipeName`
+- estrutura exemplo:
+  - ``transform(value: string, ...args: unknown[]): string {
+    switch(value) {
+      case 'fron-end': return 'code';
+      case 'beck-end': return 'computer';
+    }
+    return 'code';
+  }`` 
   
 
 
