@@ -1,0 +1,24 @@
+<mat-card>
+
+  <mat-card-header>
+    <mat-card-title>Descreva o curso</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="form" class="container_form">
+      <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Categoria" formControlName="category">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">SALVAR</button>
+    <button mat-raised-button color="warn" (click)="onCancel()">CANCELAR</button>
+  </mat-card-actions>
+
+</mat-card>

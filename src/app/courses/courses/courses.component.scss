@@ -1,5 +1,17 @@
+mat-card {
+  border-width: 20px;
+  margin: 1rem
+}
+
 table {
   width: 100%;
+}
+
+mat-toolbar {
+  background: #CADFF0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 2px solid #2196F3;
 }
 
 .loading-spinner {
@@ -10,4 +22,26 @@ table {
   justify-content: center;
 
   padding: 25px;
+}
+
+
+mat-cell {
+  margin-top: 15px;
+}
+
+.btn-add {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 400px) {
+  mat-card {
+    border-width: 10px;
+    margin: .5rem
+  }
+
+  table {
+    width: 80%;
+  }
 }

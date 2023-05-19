@@ -1,0 +1,35 @@
+mat-card {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+
+  margin: 10rem;
+  /* margin-top: 7rem;
+  margin-left: 5rem;
+  margin-right: 5rem; */
+  background: #cadff0;
+  min-width: 150px;
+}
+
+mat-card-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 10px;
+}
+
+mat-card-content .container_form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 670px) {
+  mat-card {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+

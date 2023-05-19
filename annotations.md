@@ -100,7 +100,26 @@
 - Depois dessas configurações é necessário iniciar o projeto Angular com `npm run start`
 
 
-  
+### Atualização do angular: 
+- [_update.angular.io_](https://update.angular.io/)
+  - `ng update`
 
+### Formulários(Forms) no Angular. [(_Ref_)](https://www.youtube.com/watch?v=R3yy3RX4FyM&list=PLGxZ4Rq3BOBpwaVgAPxTxhdX_TfSVlTcY&index=19&ab_channel=LoianeGroner)
+- Usar `ReactiveFormsModule` no Modulo gerenciador dos components.
+- No _component do form_, faz, por exemplo:
+  ```
+    form: FormGroup;
 
-
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      name: [null],
+      category: [null]
+    });
+  }
+- No _HTML_ (utilizando Angular Material):
+  ```
+  <mat-card-content>
+    <form [formGroup]="form" class="container_form">
+      <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="name">
+      </mat-form-field>
