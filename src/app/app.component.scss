@@ -1,0 +1,28 @@
+
+mat-toolbar {
+  justify-content: center;
+  font-family: 'skyhook mono';
+  font-weight: bolder;
+
+  font-size: 2rem;
+  background: #2196F3;
+  //animation: toolbar-gradient 5s infinite ease-in-out;
+}
+
+/* @keyframes toolbar-gradient {
+  0% {
+    background: #2196F3;
+  }
+  50% {
+    background: #F5F5F5;
+  }
+  100% {
+    background: #2196F3;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+  mat-toolbar {
+    font-size: 1.39rem;
+  }
+  }
