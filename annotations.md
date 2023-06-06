@@ -123,3 +123,15 @@
       <mat-form-field>
         <input matInput placeholder="Nome" formControlName="name">
       </mat-form-field>
+- Refatoração com `NonNullFormBuilder`:
+  ```
+  form = this.formBuilder.group({
+    name: [''],
+    category: ['']
+  });
+
+  constructor(private formBuilder: NonNullableFormBuilder, ...
+
+- Resolver guarda de rota. `ng g resolver nomePasta/nomeResolver`
+  
+

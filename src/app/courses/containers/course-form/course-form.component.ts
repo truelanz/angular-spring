@@ -1,4 +1,4 @@
-import { CoursesService } from './../services/courses.service';
+import { CoursesService } from '../../services/courses.service';
 import { Component } from '@angular/core';
 import { NonNullableFormBuilder } from '@angular/forms';
 import { Location } from '@angular/common';
@@ -26,7 +26,7 @@ export class CourseFormComponent {
   }
 
   private onError() {
-    this.snackBar.open('ERRO! Não foi possível salvar curso...', '', { duration: 3000 })
+      this.snackBar.open('ERRO! Não foi possível salvar curso...', '', { duration: 3000 })
   }
 
   private onSucess() {
