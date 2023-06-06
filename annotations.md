@@ -131,7 +131,31 @@
   });
 
   constructor(private formBuilder: NonNullableFormBuilder, ...
+  ```
+- Resolver (guarda de rota). `ng g resolver nomePasta/nomeResolver`
+   - course.resolver.ts: (para a rota /courses/edit/id)
+  ```
+  export class CourseResolver implements Resolve<Course> {
 
-- Resolver guarda de rota. `ng g resolver nomePasta/nomeResolver`
-  
+  constructor(private service: CoursesService) { }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Course> {
+    if (route.params && route.params['id']) {
+      return this.service.loadById(route.params['id'])
+    }
+    return of({ _id: '', name: '', category: '' });
+    }
+  }
+  ```
+    - Em service:
+  ```
+  loadById(id: string) {
+    return this.httpClient.get<Course>(`${this.API}/${id}`);
+  }
+  ```
+  - Em routing.modulue:
+  ```
+  { path: 'new', component: CourseFormComponent, resolve: { course: CourseResolver } },
+  { path: 'edit/:id', component: CourseFormComponent, resolve: { course: CourseResolver } }
+  ```
 
